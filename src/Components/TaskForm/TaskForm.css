@@ -39,3 +39,34 @@
 
 
 }
+
+
+.addButton{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+   
+    height: auto;
+    font-size:large;
+    border-radius: 20px;
+    transition: transform 0.2s ease-in-out;
+
+}
+
+.addButton:hover{
+    background-color: aqua;
+    transform: scale(1.2);  
+    color: black;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
+    
+
+}
+
+
+.btn-plus{
+    margin: 4%;
+    
+}

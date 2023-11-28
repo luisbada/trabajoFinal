@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
-import { BiListPlus } from "react-icons/bi";
+
+import { FaSquarePlus } from "react-icons/fa6";
+
+
 import { v4 as uuidv4 } from 'uuid';
 import './TaskForm.css'
 
@@ -19,7 +22,7 @@ const TaskForm = ({ addTask }) => {
     e.preventDefault()
     const title = e.target.title.value
     const description = e.target.description.value
-    const task = { title, description, createdAt: new Date().toDateString(), id: uuidv4()}
+    const task = { title, description, createdAt: new Date().toDateString(), id: uuidv4() }
     console.log(task)
     addTask(task)
     handleCloseModal();
@@ -28,7 +31,7 @@ const TaskForm = ({ addTask }) => {
 
   return (
     <div>
-      <button className='addButton' onClick={handleOpenModal}>nueva tarea<BiListPlus /></button>
+      <button className='addButton' onClick={handleOpenModal}>nueva tarea <FaSquarePlus className='btn-plus' /></button>
       {
         isOpenModal
         &&
