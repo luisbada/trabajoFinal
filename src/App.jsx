@@ -22,8 +22,11 @@ function App() {
   }
 
   useEffect(()=>{
-    setCurrentTasks(tasks.filter(task => task.title.toLowerCase().includes(searchString.toLowerCase())))||
-    setCurrentTasks(tasks.filter(task => task.description.toLowerCase().includes(searchString.toLowerCase())))
+    setCurrentTasks(tasks.filter(task => 
+    task.title.toLowerCase().includes(searchString.toLowerCase())
+    ||
+    task.description.toLowerCase().includes(searchString.toLowerCase())
+    ))  
   
     },[searchString, tasks])
 
@@ -39,8 +42,9 @@ function App() {
 
         <TaskForm addTask={addTask} />
       </div>
-      <TaskList tasks_={currentTasks} deleteTask={deleteTask}  />
-
+      <div className='form_'>
+      <TaskList tasks_={currentTasks} deleteTask={deleteTask} />
+      </div>
     </>
   )
 }

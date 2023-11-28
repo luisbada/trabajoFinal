@@ -21,29 +21,34 @@ const TaskItem = ({task, deleteTask,}) => {
       
       
       {
-        completed_Task   
-        ?
-        <div className='completedTask' >
-        <h3>{task.title}<span>TAREA COMPLETADA</span></h3>
-        <p>{task.description}</p>
-        </div>
-        :
-        <div>
-        <h3>{task.title}</h3>
-        <p>{task.description}</p>
-        </div>
+        completed_Task
+          ?
+          <div className='completedTask' >
+            <h3>{task.title}</h3>
+            <p>TAREA COMPLETADA</p>
+          </div>
+          :
+          <div>
+            <h3>{task.title}</h3>
+            <p>{task.description}</p>
+          </div>
       }
 
            
 
       <span>{task.createdAt} </span><br />
-      <button onClick={() => deleteTask(task.id)}>Finalizar</button>
+      <div className='buttons'>
+      <button onClick={() => deleteTask(task.id)}>Finalizar tarea</button>
       {
         completed_Task
-        ? <button className='btn-uncompleted' onClick={()=>handleUncomepletedTask()} >Tarea completada <FaTrashCan className='trashIcon'/></button>
-        :<button className='btn-completed' onClick={()=>handleComepletedTask()} >Tarea completada <FaTrashCan className='trashIcon'/></button>
+        ?<div className='completedButtons'>
+            <button className='btn-completed' onClick={()=>handleUncomepletedTask()} >Tarea completada <FaTrashCan className='trashIcon'/></button>
+            <button onClick={() => deleteTask(task.id)}>Eliminar Tarea</button>
+        </div>
+        :<button onClick={()=>handleComepletedTask()} >Tarea completada <FaTrashCan className='trashIcon'/></button>
+        
       }
-      
+      </div>
       <hr />
     </div>
   )

@@ -4,19 +4,20 @@
     padding: 15px;
     margin-bottom: 15px;
     border-radius: 20px;
-    background: radial-gradient(circle, #ffffff, #e0e0e0);
+    background-color:  #F4ECDC;
     box-shadow: 22px 0px 10px rgba(0, 0, 0, 0.1);
 
 
 }
 
 h3 {
-    display: block    ;
-    color: #e4e4e4;
+    display: flex;
+    justify-content: center;
+    color: #ffbf00;     
     padding: 20px;
     margin: 0;
-    border-radius: 10px;
-    background: radial-gradient(circle, #646464, #292929);
+    
+    background-color: #182733;
 }
 
 
@@ -32,66 +33,65 @@ span {
   
 button {
     display: flex;
-    justify-content: space-between;
     margin-top: 10px;
     padding: 8px 12px;
-    background-color: #4caf50;
-    color: #fff;
+    background-color:#1bb0ce;
+    color: #080C0F;
     border: none;
     border-radius: 3px;
     cursor: pointer;
+    align-items: center;
+    font-weight: bold;
   }
   
 button:hover {
-    background-color: #45a049;
+    background-color:  #080C0F ;
+    color: #1bb0ce;
   }
 
   
   .trashIcon {
-    margin: 5px
+    margin: 10px;
+    }
 
-  }
-
-  .btn-completed{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: rgb(255, 153, 0);
-
-  }
 
   .completedTask p{
-    text-decoration: line-through;
-    font-size: large;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: xx-large;
     color: brown;
   }
 
   .completedTask h3{
     text-decoration: line-through;
-    display: block    ;
-    color: #e4e4e4;
+    text-align: center;
+    color: #CBEBF3;
     padding: 20px;
     margin: 0;
     border-radius: 10px;
-    background: radial-gradient(circle, #2dc528, rgb(5, 66, 3));
+    background-color: #00565C;
   }
 
-  .completedTask h3 {
-    display: flex;
-    justify-content: space-between;
-
-  }
-
-  .completedTask span{
-    text-decoration:double
-
-  }
-
-  .btn-uncompleted{
+  .btn-completed{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(0, 132, 255);
+    background-color: rgb(255, 153, 0);
+    font-weight: bold;
 
+
+  }
+
+
+  .buttons{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .completedButtons{
+     display: flex;
+    justify-content: space-between;
 
   }

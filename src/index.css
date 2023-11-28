@@ -1,7 +1,8 @@
 body{
     font-family: sans-serif;
     padding: 5vh 5vw;
-    background-color: rgb(25, 27, 27);
+    height: 100vh;
+    background-image: linear-gradient(to bottom right,#162027,#080D10);
 }
 
 
