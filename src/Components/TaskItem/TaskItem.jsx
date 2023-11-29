@@ -38,16 +38,16 @@ const TaskItem = ({task, deleteTask,}) => {
 
       <span>{task.createdAt} </span><br />
       <div className='buttons'>
-      <button onClick={() => deleteTask(task.id)}>Finalizar tarea</button>
-      {
+      <button className='trash' onClick={() => deleteTask(task.id)}>Finalizar tarea<FaTrashCan className='trashIcon'/></button>
+       {
         completed_Task
         ?<div className='completedButtons'>
-            <button className='btn-completed' onClick={()=>handleUncomepletedTask()} >Tarea completada <FaTrashCan className='trashIcon'/></button>
-            <button onClick={() => deleteTask(task.id)}>Eliminar Tarea</button>
+            <button className='btn-completed' onClick={()=>handleUncomepletedTask()} >Tarea completada </button>
+            <button className='trash' onClick={() => deleteTask(task.id)}>Eliminar Tarea<FaTrashCan className='trashIcon'/></button>
         </div>
-        :<button onClick={()=>handleComepletedTask()} >Tarea completada <FaTrashCan className='trashIcon'/></button>
+        :<button onClick={()=>handleComepletedTask()} >Tarea completada </button>
         
-      }
+       }
       </div>
       <hr />
     </div>

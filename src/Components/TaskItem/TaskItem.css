@@ -16,7 +16,7 @@ h3 {
     color: #ffbf00;     
     padding: 20px;
     margin: 0;
-    
+    border-radius: 10px;
     background-color: #182733;
 }
 
@@ -93,5 +93,16 @@ button:hover {
   .completedButtons{
      display: flex;
     justify-content: space-between;
+
+  }
+
+  .trash{
+    background-color: rgb(252, 83, 83);
+
+  }
+  .trash:hover{
+    background-color: rgb(184, 18, 18);
+    size-adjust: 2%;
+    color:#CBEBF3
 
   }
